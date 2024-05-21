@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text to Speech</title>
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=HKbBD4gB"></script>
+    <style>
+      #controls {
+        margin-top: 20px;
+        position: relative;
+        display: inline-block;
+      }
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      button img {
+        width: 30px;
+        height: 30px;
+      }
+      button svg {
+        width: 30px;
+        height: 30px;
+      }
+      button:disabled svg {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      button:disabled svg {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+      .dropdown-content button {
+        display: block;
+        width: 100%;
+        text-align: left;
+      }
+      .show {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      Presentación de la sesión de la sesión de la sesión de análisis de la
+      presencia de satisfacción mapeo independencia papá papá de la boda de
+      eficiencia de la paciencia actividad de paciencia establecimiento de
+      restaurante examen teoría de la escalera de galletas de recepción de
+      recepción de mantenimiento enfermedad idea ambición ganadora de tema de
+      hecho celular usuario de la respiración genética cajista de cajista de
+      desarrollo de resultado de dos moneda tecnológica energía artesanales de
+      significado de significación de invitado desarrollo
+    </div>
+    <div id="controls">
+      <button id="readButton">
+        <svg
+          fill="#000000"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 512 512"
+          xml:space="preserve"
+        >
+          <g>
+            <g>
+              <path
+                d="M449.511,137.648v-82.38c0-9.072-4.668-17.227-12.487-21.814c-7.849-4.605-17.29-4.7-25.251-0.247
+			c-76.024,42.516-158.725,67.345-245.805,73.802c-0.667,0.049-79.372,0.393-79.372,0.393c-19.767,0-36.105,14.923-38.366,34.091
+			H32.075C14.39,141.493,0,155.881,0,173.567v70.468c0,17.686,14.39,32.075,32.075,32.075h16.153
+			c1.628,13.795,10.544,25.383,22.785,30.799l57.485,158.648c3.593,9.875,13.067,16.511,23.578,16.511h57.687
+			c8.178,0,15.86-3.999,20.551-10.697c4.691-6.7,5.822-15.287,3.03-22.96l-49.389-136.237
+			c80.482,8.361,157.039,32.601,227.817,72.183c3.905,2.184,8.166,3.273,12.42,3.273c4.417-0.001,8.83-1.175,12.829-3.521
+			c7.819-4.588,12.489-12.742,12.489-21.816v-82.38C484.711,275.353,512,245.204,512,208.781
+			C512,172.357,484.711,142.207,449.511,137.648z M47.951,251.372H32.075c-4.047,0-7.338-3.291-7.338-7.338v-70.467
+			c0-4.044,3.291-7.337,7.338-7.337h15.876V251.372z M80.93,284.245c-4.85-2.174-8.242-7.039-8.242-12.688V146.044h0.001
+			c0-7.667,6.239-13.905,13.906-13.905h67.333v153.324c0,0-67.92-0.026-68.213-0.044C83.234,285.132,82.712,285.004,80.93,284.245z
+			 M210.091,456.853c0.04,0.101,0.066,0.173-0.041,0.324c-0.105,0.151-0.183,0.151-0.288,0.151h-57.687
+			c-0.147,0-0.282-0.093-0.327-0.215L98.515,310.199h58.411L210.091,456.853z M424.774,362.294c0,0.179,0,0.322-0.267,0.479
+			c-0.318,0.184-0.508,0.079-0.66-0.006c-76.034-42.52-158.469-68.045-245.182-75.96v-156.04
+			c86.72-7.927,169.155-33.454,245.179-75.97c0.156-0.085,0.349-0.19,0.663-0.006c0.267,0.157,0.267,0.298,0.267,0.477V362.294z
+			 M449.511,254.873v-92.185c21.503,4.314,37.752,23.339,37.752,46.092C487.263,231.534,471.013,250.56,449.511,254.873z"
+              />
+            </g>
+          </g>
+        </svg>
+      </button>
+
+      <div id="dropdown" class="dropdown-content">
+        <button id="restartButton" disabled>
+          <!-- <img src="icons/restart.svg" alt="Restart" /> -->
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 2.99988C16.9706 2.99988 21 7.02931 21 11.9999C21 16.9704 16.9706 20.9999 12 20.9999C7.02944 20.9999 3 16.9704 3 11.9999C3 9.17261 4.30367 6.64983 6.34267 4.99988"
+              stroke="#292929"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M3 4.49988H7V8.49988"
+              stroke="#292929"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <button id="stopButton" disabled>
+          <!-- <img src="icons/stop.svg" alt="Stop" /> -->
+          <svg
+            height="800px"
+            width="800px"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 30.05 30.05"
+            xml:space="preserve"
+          >
+            <g>
+              <path
+                style="fill: #030104"
+                d="M18.993,10.688h-7.936c-0.19,0-0.346,0.149-0.346,0.342v8.022c0,0.189,0.155,0.344,0.346,0.344
+		h7.936c0.19,0,0.344-0.154,0.344-0.344V11.03C19.336,10.838,19.183,10.688,18.993,10.688z"
+              />
+              <path
+                style="fill: #030104"
+                d="M15.026,0C6.729,0,0.001,6.726,0.001,15.025S6.729,30.05,15.026,30.05
+		c8.298,0,15.023-6.726,15.023-15.025S23.324,0,15.026,0z M15.026,27.54c-6.912,0-12.516-5.604-12.516-12.515
+		c0-6.914,5.604-12.517,12.516-12.517c6.913,0,12.514,5.603,12.514,12.517C27.54,21.936,21.939,27.54,15.026,27.54z"
+              />
+            </g>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script>
+      let isSpeaking = false;
+      let paused = false;
+      let lastOffset = 0;
+      let currentLanguage = getLanguage();
+      const readButton = document.getElementById("readButton");
+      const restartButton = document.getElementById("restartButton");
+      const stopButton = document.getElementById("stopButton");
+      const dropdown = document.getElementById("dropdown");
+
+      function getLanguage() {
+        return document.documentElement.lang || "en-GB";
+      }
+
+      function startSpeaking(offset = 0) {
+        const text = document.body.innerText.slice(offset);
+        const lang = getLanguage();
+        const voice = getVoiceForLanguage(lang);
+
+        responsiveVoice.speak(text, voice, {
+          onend: () => {
+            isSpeaking = false;
+            paused = false;
+            updateReadButtonIcon("read");
+            restartButton.disabled = true;
+            stopButton.disabled = true;
+            dropdown.classList.remove("show");
+          }
+        });
+
+        isSpeaking = true;
+        paused = false;
+        updateReadButtonIcon("pause");
+        restartButton.disabled = false;
+        stopButton.disabled = false;
+      }
+
+      function stopSpeaking() {
+        isSpeaking = false;
+        responsiveVoice.cancel();
+        updateReadButtonIcon("read");
+        restartButton.disabled = true;
+        stopButton.disabled = true;
+        dropdown.classList.remove("show");
+      }
+
+      function togglePauseResume() {
+        if (paused) {
+          responsiveVoice.resume();
+          updateReadButtonIcon("pause");
+        } else {
+          responsiveVoice.pause();
+          updateReadButtonIcon("play");
+        }
+        paused = !paused;
+      }
+
+      function toggleSpeech() {
+        if (isSpeaking) {
+          togglePauseResume();
+        } else {
+          startSpeaking(lastOffset);
+        }
+      }
+
+      function updateReadButtonIcon(state) {
+        const readButtonImg = readButton.querySelector("svg");
+        if (state === "pause") {
+          readButtonImg.innerHTML = `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 7C10.5523 7 11 7.44772 11 8V16C11 16.5523 10.5523 17 10 17C9.44771 17 9 16.5523 9 16V8C9 7.44772 9.44772 7 10 7Z" fill="#000000"/>
+<path d="M15 8C15 7.44772 14.5523 7 14 7C13.4477 7 13 7.44772 13 8V16C13 16.5523 13.4477 17 14 17C14.5523 17 15 16.5523 15 16V8Z" fill="#000000"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12ZM12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3Z" fill="#000000"/>
+</svg>`;
+          readButtonImg.alt = "Pause";
+        } else if (state === "play") {
+          readButtonImg.innerHTML = `<svg 
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21ZM12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23Z"
+    fill="#000000"
+  />
+  <path d="M16 12L10 16.3301V7.66987L16 12Z" fill="#000000" />
+</svg>`;
+          readButtonImg.alt = "Play";
+        } else {
+          readButtonImg.innerHTML = `<svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 512 512" xml:space="preserve">
+<g>
+	<g>
+		<path d="M449.511,137.648v-82.38c0-9.072-4.668-17.227-12.487-21.814c-7.849-4.605-17.29-4.7-25.251-0.247
+			c-76.024,42.516-158.725,67.345-245.805,73.802c-0.667,0.049-79.372,0.393-79.372,0.393c-19.767,0-36.105,14.923-38.366,34.091
+			H32.075C14.39,141.493,0,155.881,0,173.567v70.468c0,17.686,14.39,32.075,32.075,32.075h16.153
+			c1.628,13.795,10.544,25.383,22.785,30.799l57.485,158.648c3.593,9.875,13.067,16.511,23.578,16.511h57.687
+			c8.178,0,15.86-3.999,20.551-10.697c4.691-6.7,5.822-15.287,3.03-22.96l-49.389-136.237
+			c80.482,8.361,157.039,32.601,227.817,72.183c3.905,2.184,8.166,3.273,12.42,3.273c4.417-0.001,8.83-1.175,12.829-3.521
+			c7.819-4.588,12.489-12.742,12.489-21.816v-82.38C484.711,275.353,512,245.204,512,208.781
+			C512,172.357,484.711,142.207,449.511,137.648z M47.951,251.372H32.075c-4.047,0-7.338-3.291-7.338-7.338v-70.467
+			c0-4.044,3.291-7.337,7.338-7.337h15.876V251.372z M80.93,284.245c-4.85-2.174-8.242-7.039-8.242-12.688V146.044h0.001
+			c0-7.667,6.239-13.905,13.906-13.905h67.333v153.324c0,0-67.92-0.026-68.213-0.044C83.234,285.132,82.712,285.004,80.93,284.245z
+			 M210.091,456.853c0.04,0.101,0.066,0.173-0.041,0.324c-0.105,0.151-0.183,0.151-0.288,0.151h-57.687
+			c-0.147,0-0.282-0.093-0.327-0.215L98.515,310.199h58.411L210.091,456.853z M424.774,362.294c0,0.179,0,0.322-0.267,0.479
+			c-0.318,0.184-0.508,0.079-0.66-0.006c-76.034-42.52-158.469-68.045-245.182-75.96v-156.04
+			c86.72-7.927,169.155-33.454,245.179-75.97c0.156-0.085,0.349-0.19,0.663-0.006c0.267,0.157,0.267,0.298,0.267,0.477V362.294z
+			 M449.511,254.873v-92.185c21.503,4.314,37.752,23.339,37.752,46.092C487.263,231.534,471.013,250.56,449.511,254.873z"/>
+	</g>
+</g>
+</svg>`;
+          readButtonImg.alt = "Read";
+        }
+      }
+
+      function getVoiceForLanguage(language) {
+        const voices = {
+          en: "UK English Female",
+          es: "Spanish Female",
+          fr: "French Female",
+          de: "Deutsch Female",
+          it: "Italian Female",
+          nl: "Dutch Female",
+          pl: "Polish Female",
+          la: "Latin Female",
+          hi: "Hindi Female",
+        };
+        return voices[language] || voices["en"];
+      }
+
+      function checkLanguageChange() {
+        const newLanguage = getLanguage();
+        if (newLanguage !== currentLanguage) {
+          stopSpeaking();
+          currentLanguage = newLanguage;
+        }
+      }
+
+      readButton.addEventListener("click", () => {
+        toggleSpeech();
+        dropdown.classList.toggle("show");
+      });
+
+      restartButton.addEventListener("click", () => {
+        if (isSpeaking) {
+          responsiveVoice.cancel();
+          startSpeaking(0);
+        }
+      });
+      stopButton.addEventListener("click", stopSpeaking);
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden && isSpeaking) {
+          stopSpeaking();
+        }
+      });
+
+      setInterval(checkLanguageChange, 500);
+    </script>
+  </body>
+</html>
